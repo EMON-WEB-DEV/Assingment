@@ -91,11 +91,12 @@ interface Book {
   const available = book.isAvailable ? 'Yes' : 'No';
 
   console.log(
-        
+
         `Title: ${book.title}, Author: ${book.author},
 
          Published: ${book.publishedYear}, 
 
-         Available: ${available}`
-  );
-}
+         Available: ${available}`);
+
+
+    };
