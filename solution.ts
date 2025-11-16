@@ -76,3 +76,26 @@ const filterActiveUsers = (users : Users[]) : Users[] => {
         return users.filter(user => user.isActive);
 }
 // Problem -6
+
+
+interface Book {
+
+        title : string;
+        author : string;
+        publishedYear : number;
+        isAvailable : boolean;
+}
+
+  const  printBookDetails = (book: Book): void =>{
+
+  const available = book.isAvailable ? 'Yes' : 'No';
+
+  console.log(
+        
+        `Title: ${book.title}, Author: ${book.author},
+
+         Published: ${book.publishedYear}, 
+
+         Available: ${available}`
+  );
+}
