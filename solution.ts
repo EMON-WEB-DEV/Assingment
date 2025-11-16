@@ -5,18 +5,49 @@ const formatValue = (value: string | number | boolean) : string | number | boole
         if (typeof value === 'string') {
                 return value.toUpperCase();
         }
-        else if (typeof value === 'number') {
+
+        if (typeof value === 'number') {
                 return value * 10;
         }
-        else {
-                return ! value;
-        }
 
-}
+        return ! value;
+         
+   }
 
 // Problem -2
 
 const getLength = (input: string | any[]) : number => {
 
-        return input.length;
+                if (typeof input === "string") {
+
+                        return input.length;
+
+                }       
+
+                if (Array.isArray(input)) {
+
+                        return input.length;
+                }
+                 
+                return 0;
+         }
+
+
+// Problem -3
+
+class Person {
+
+        name : string;
+        age : number;
+
+        constructor (name : string , age : number) {
+                this.name = name;
+                this.age = age;
+        }
+
+        getDetails() : string {
+                return `Name: ${this.name}, Age: ${this.age}`;
+        }
 }
+
+// Problem -4
