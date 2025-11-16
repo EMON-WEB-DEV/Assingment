@@ -46,7 +46,7 @@ class Person {
         }
 
         getDetails() : string {
-                return `Name: ${this.name}, Age: ${this.age}`;
+                return `"Name: ${this.name}, Age: ${this.age}"`;
         }
 }
 
@@ -57,8 +57,22 @@ type Item = {
     rating: number;
 };
 
-function filterByRating(items: Item[]): Item[] {
+const filterByRating = (items: Item[]): Item[] =>{
 
         return items.filter(item => item.rating >= 4);
 };
 
+// Problem -5
+
+type Users = {
+        id : number;
+        name : string;
+        email : string;
+        isActive : boolean;
+}
+
+const filterActiveUsers = (users : Users[]) : Users[] => {
+
+        return users.filter(user => user.isActive);
+}
+// Problem -6
